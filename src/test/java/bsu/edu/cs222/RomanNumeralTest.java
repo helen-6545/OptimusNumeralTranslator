@@ -40,4 +40,18 @@ class RomanNumeralTest {
         String test=RomanNumeralTranslator.tensTranslator(input);
         Assertions.assertEquals("L", test);
     }
+
+    @Test
+    public void TestTwoHundred() {
+        int input = 2;
+        String test=RomanNumeralTranslator.hundredsTranslator(input);
+        Assertions.assertEquals("CC", test);
+    }
+
+    @Test
+    public void TestOneThousand() {
+        int input = 1;
+        String test=RomanNumeralTranslator.thousandsTranslator(input);
+        Assertions.assertEquals("M", test);
+    }
 }

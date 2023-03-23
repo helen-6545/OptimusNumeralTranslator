@@ -54,4 +54,25 @@ class RomanNumeralTest {
         String test=RomanNumeralTranslator.thousandsTranslator(input);
         Assertions.assertEquals("M", test);
     }
+
+    @Test
+    public void Test456() {
+        int input = 456;
+        String test=RomanNumeralTranslator.NumeralOrganizer(input);
+        Assertions.assertEquals("CDLVI", test);
+    }
+
+    @Test
+    public void Test1008() {
+        int input = 1008;
+        String test=RomanNumeralTranslator.NumeralOrganizer(input);
+        Assertions.assertEquals("MVIII", test);
+    }
+
+    @Test
+    public void Test2070() {
+        int input = 2070;
+        String test=RomanNumeralTranslator.NumeralOrganizer(input);
+        Assertions.assertEquals("MMLXX", test);
+    }
 }

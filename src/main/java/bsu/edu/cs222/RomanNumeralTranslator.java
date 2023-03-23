@@ -2,6 +2,20 @@ package bsu.edu.cs222;
 
 public class RomanNumeralTranslator {
 
+    public static String NumeralOrganizer(int input){
+        int thousands=input/1000;
+        input=input%1000;
+        String output=thousandsTranslator(thousands);
+        int hundreds=input/100;
+        input=input%100;
+        output=output+hundredsTranslator(hundreds);
+        int tens=input/10;
+        output=output+tensTranslator(tens);
+        input=input%10;
+        output=output+onesTranslator(input);
+        return output;
+    }
+
     public static String thousandsTranslator(int input){
         return switch (input) {
             case 1 -> "M";

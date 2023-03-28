@@ -13,4 +13,9 @@ public class DialogueOutput {
         System.out.println("Number out of range");
         exit(0);
     }
+
+    public static void IncorrectFormat() {
+        System.out.println("That's not a number");
+        exit(0);
+    }
 }

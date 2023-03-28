@@ -9,7 +9,13 @@ public class UserInterface {
         Scanner userChoice = new Scanner(System.in);
     DialogueOutput.instructions();
     String UserInput = userChoice.nextLine();
-    int number = Integer.parseInt(UserInput);
+        int number=0;
+    try {
+        number = Integer.parseInt(UserInput);
+    }
+    catch(Exception e){
+        DialogueOutput.IncorrectFormat();
+    }
     boolean check=RomanNumeralTranslator.OutOfRangeCheck(number);
     if(!check){
         DialogueOutput.OutOfRangeDialogue();
